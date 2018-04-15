@@ -1,2 +1,3 @@
-# lopudesigns
-A fully featured web design company
+# Quasar App
+
+> WIP
