@@ -32,7 +32,7 @@
                 //-   width: 'auto'
                 //- }`
                 img(
-                  src="/assets/img/l.png"
+                  src="~assets/img/l.png"
                   )
             q-item-main(
             )

@@ -17,7 +17,7 @@
               )
               img(
                 v-for="(img, index) in website.images"
-                :src="'/assets/img/'+website.name+'/'+img+'.png'"
+                :src="'statics/img/'+website.name+'/'+img+'.png'"
               )
             q-card-title(
               ).text-primary 
