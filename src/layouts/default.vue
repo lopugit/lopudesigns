@@ -362,7 +362,7 @@ export default {
 				this.$q.notify({message: 'sending..', color: 'info'})
 				this.$axios({
 					method: 'post',
-					url: 'http://api.lopudesigns.src/api/email/json',
+					url: 'http://api.lopudesigns.com/api/email/json',
 					data: {
 						json: this.contact,
 						email: 'nikolaj@lopudesigns.com'
