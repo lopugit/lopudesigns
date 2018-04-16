@@ -22,7 +22,7 @@
 						q-card-title(
 							).text-primary 
 							a(
-								:href="'http://'+website.name+'.lopudesigns.bld'"
+								:href="'http://'+website.name+'.lopudesigns.com'"
 								)
 								| {{ website.name+website.domain }}
 							span(slot="subtitle").text-primary Made by 
