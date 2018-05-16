@@ -113,8 +113,10 @@ export default {
 								'PostCSS',
 								'Pug SSR',
 								'React Router',
+								'React',
 								'Redux',
 								'Sass',
+								'Steem Connect',
 								'Webpack',
 							]
 						},
