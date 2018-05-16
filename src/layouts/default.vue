@@ -294,7 +294,7 @@ export default {
 	data () {
 		return {
 			leftDrawerOpen: this.$q.platform.is.desktop,
-			contactModal: this.$store.state.ld.contactModal,
+			contactModal: this.$store.state.store.contactModal,
 			contact: {
 				price: 34,
 				realprice: this.normalizedPrice,
@@ -386,8 +386,8 @@ export default {
 		}
 	},
 	watch: {
-		'$store.state.ld.contactModal'(){
-			this.contactModal = this.$store.state.ld.contactModal
+		'$store.state.store.contactModal'(){
+			this.contactModal = this.$store.state.store.contactModal
 		}
 	},
 	computed: {

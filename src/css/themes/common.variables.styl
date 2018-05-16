@@ -16,7 +16,7 @@
 
 $primary   = #273239
 // $secondary = #EEB100
-$secondary = #FFC14C
+$secondary = darken(#FFC14C, 10)
 $tertiary  = #1B2327
 
 $text = #E9FFFF
@@ -48,3 +48,70 @@ keyframes(name)
 		@content
 	@keyframes #{name}
 		@content
+
+.flex
+		display flex
+
+.q-drawer-container
+		&.flex
+				display: block
+				>.q-layout-drawer
+						display: flex
+				&.column
+						>.q-layout-drawer
+								flex-direction: column
+.q-mt-auto
+		margin-top auto
+.q-ml-auto
+		margin-left auto
+.q-mr-auto
+		margin-right auto
+.q-mb-auto
+		margin-bottom auto
+.q-mt-no
+		margin-top 0px
+.q-ml-no
+		margin-left 0px
+.q-mr-no
+		margin-right 0px
+.q-mb-no
+		margin-bottom 0px
+.q-pt-no
+		padding-top 0px
+.q-pl-no
+		padding-left 0px
+.q-pr-no
+		padding-right 0px
+.q-pb-no
+		padding-bottom 0px
+		
+.no-border,
+.bd-no,
+.no-bd
+		border: none
+.br-none,
+.br-no
+		border-radius 0px !important
+.icon-avatar
+		& img
+				width: 24px
+				height auto
+.bg-none
+		background rgba(0,0,0,0) !important
+img
+		&.q-img-xs
+				width 24px
+				height auto
+		&.q-img-sm
+				width 30px
+				height auto
+		&.q-img-md
+				width 36px
+				height auto
+		&.q-img-lg
+				width 42px
+				height auto
+		&.q-img-xl
+				width 48px
+				height auto
+				

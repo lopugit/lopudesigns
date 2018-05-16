@@ -12,4 +12,7 @@ export default {
 </script>
 
 <style lang="sass">
+#q-app
+	max-width: 100vw
+	overflow: hidden
 </style>
