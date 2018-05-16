@@ -228,6 +228,7 @@ export default {
 						{
 							type: 'front end',
 							list: [
+								'Babel',
 								'CSS3',
 								'HTML5',
 								'JS',
