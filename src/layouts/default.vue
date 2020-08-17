@@ -11,29 +11,9 @@
 				:overlay="true"
 				color="primary"
 				).z-top
-				//- q-toolbar(
-				//-   color="primary"
-				//-   )
-					//- q-btn(
-					//-   icon="close"
-					//-   @click="mainDrawer = !mainDrawer"
-					//-   ).shadow-0
 				q-list
 					q-item(
 						)
-						//- q-item-side
-							q-item-tile(
-								avatar
-								sparse
-								@click="mainDrawer = !mainDrawer"
-								).q-item-tile-profile-picture
-								//- :style=`{
-								//-   height: '50px',
-								//-   width: 'auto'
-								//- }`
-								img(
-									src="~assets/img/l.png"
-									)
 						q-item-main(
 						)
 							q-item-tile(
@@ -41,23 +21,12 @@
 							)
 								a(href="/").brand-title.col-6.q-pa-sm.text-center
 									| Lopu Designs
-							//- q-item-tile(
-								sublabel
-								size=".5rem"
-								) Star Man
 						q-item-side(
 							)
 							q-btn(
 								icon="close"
 								@click="mainDrawer = !mainDrawer"
 							).shadow-0
-					//- q-item.q-mt-xl.q-mb-sm(
-						).text-white
-						q-btn(
-							@click="mainDrawer = !mainDrawer; $router.push('/services')"
-							label="Services"
-							color="secondary"
-						).full-width
 					q-item.q-mt-xl(
 						).text-white
 						q-btn(
@@ -67,7 +36,6 @@
 						).full-width
 					q-item.q-mt-sm(
 						).text-white
-						//- icon="tv"
 						q-btn(
 							@click="changeContact(true)"
 							label="Contact"
@@ -83,8 +51,13 @@
 					@hide="changeContact(false)"
 					minimized
 				).contact-modal-container
-					.q-pa-lg.contact-modal-positioner
-						h2(style="margin-bottom: 0px") Contact
+					q-btn(
+						icon="close"
+						size="lg"
+						@click="changeContact(false)"
+					).shadow-0.text-secondary.close-contact
+					.q-pa-lg.contact-modal-positioner.q-ma-md
+						h2(style="margin-bottom: 0px; margin-top: 0px") Contact
 						.contacts(style="display: flex;")
 							a(style="margin-top: -5px;" href="mailto:friends@lopudesigns.com")
 								h5.q-pb-md friends@lopudesigns.com
@@ -471,4 +444,8 @@ export default {
 		border-color $primary
 	.q-item-separator-component
 		background-color $tertiary
+
+.close-contact
+	position: absolute
+	right: 0px
 </style>
