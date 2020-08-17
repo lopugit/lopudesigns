@@ -1,5 +1,6 @@
 module.exports = {
   apps : [{
+		name: 'lopudesigns.com',
     script: 'npm',
 		args: 'run serve',
     watch: '.'
