@@ -48,7 +48,7 @@
 										q-tooltip(
 											) {{ tech }}
 						q-collapsible(
-							label="Full Stack"
+							label="Show Stack"
 							:class=`{ 'animate-bounce': website.stackShown === false }`
 							@show=`handleShow(website)`
 							@hide=`handleHide(website)`
