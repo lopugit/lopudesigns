@@ -60,7 +60,7 @@
 						h2(style="margin-bottom: 0px; margin-top: 0px") Contact
 						.contacts.q-pt-xs.q-pb-md
 							a.text-secondary.q-pr-sm(href="mailto:enquiries@lopudesigns.com")
-								| friends@lopudesigns.com
+								| enquiries@lopudesigns.com
 							a.text-secondary(href="tel:+61422016261")
 								| +614 2201 6261
 						form(
