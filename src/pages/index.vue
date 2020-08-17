@@ -26,8 +26,14 @@
 							)
 						q-card-title(
 							).text-center.text-primary 
-							a(
-								:href="'http://'+website.name+ (website.originLink ? website.domain : '.lopudesigns.com')"
+							//- .site-title
+							//- 	| {{ website.name+website.domain }}
+							//- a(
+							//- 	:href="'http://'+website.name+ (website.originLink ? website.domain : '.lopudesigns.com')"
+							//- 	)
+							//- 	| {{ website.name+website.domain }}
+							a.site-title(
+								:href="'https://github.com/lopugit/'+(website.github || (website.githubPrefix || '')+website.name+(website.githubSuffix || ''))"
 								)
 								| {{ website.name+website.domain }}
 						q-card-main
@@ -41,9 +47,11 @@
 										)
 										q-tooltip(
 											) {{ tech }}
-
 						q-collapsible(
 							label="Full Stack"
+							:class=`{ 'animate-bounce': website.stackShown === false }`
+							@show=`handleShow(website)`
+							@hide=`handleHide(website)`
 							).text-primary
 							.tech-categories-container
 								.tech-categories
@@ -68,12 +76,25 @@
 
 							
 						.q-card-footer
-							span(slot="subtitle").devbytext.text-primary.flex Developed by
-								a(
-									@click="$emit('openContact')"
-									style="margin-left: 5px; font-size: 14px"
-									).site-author
-									| {{ website.author }}
+							.wrapper
+								span(slot="subtitle").devbytext.text-primary.flex Developed by
+									//- @click="$emit('openContact')"
+									a(
+										:href="website.authorContact"
+										target="blank"
+										style="font-size: 14px"
+										).site-author.q-ml-xs
+										| {{ website.author }}
+							.wrapper.github
+								a(slot="subtitle").devbytext.github-link.site-title(
+									:href="'https://github.com/lopugit/'+(website.github || (website.githubPrefix || '')+website.name+(website.githubSuffix || ''))"
+									)
+									| View on github
+									img.q-ml-xs(
+										:src="'statics/img/technology/Github.png'"
+									)
+									q-tooltip(
+										) Github
 
 </template>
 
@@ -88,15 +109,17 @@ export default {
 		return {
 			websites: [
 				{
-					name: 'ezira',
+					name: 'weyoume',
 					domain: '.io',
-					images: 6,
+					github: 'weapp',
+					images: 5,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					originLink: true,
 					mainStack: [
 						'Steem',
 						'Steem Connect',
-						'React',
+						'React.js',
 						'Node.js'
 					],
 					technologies: [
@@ -113,7 +136,7 @@ export default {
 								'PostCSS',
 								'Pug SSR',
 								'React Router',
-								'React',
+								'React.js',
 								'Redux',
 								'Sass',
 								'Steem Connect',
@@ -124,7 +147,7 @@ export default {
 							type: 'back end',
 							list: [
 								'Babel',
-								'Express',
+								'Express.js',
 								'Nginx',
 								'Node.js',
 								'npm',
@@ -152,76 +175,15 @@ export default {
 					]
 				},
 				{
-					name: 'myleisure',
-					domain: '.com.au',
-					images: 6,
-					author: 'Nikolaj Frey',
-					mainStack: [
-						'MongoDB',
-						'Express',
-						'Pug SSR',
-						'Node.js'
-					],
-					technologies: [
-						{
-							type: 'front end',
-							list: [
-								'Babel',
-								'CSS3',
-								'Font Awesome',
-								'Fort Awesome',
-								'Grunt',
-								'HTML5',
-								'jQuery',
-								'JS',
-								'npm',
-								'PostCSS',
-								'Pug SSR',
-								'Sass',
-								'Shopify JS SDK',
-							]
-						},
-						{
-							type: 'back end',
-							list: [
-								'Babel',
-								'Express',
-								'MongoDB',
-								'Mongoose',
-								'Nginx',
-								'Node.js',
-								'npm',
-								'PM2',
-								'Pug SSR',
-								'Shopify Node SDK',
-							]
-						},
-						{
-							type: 'version control',
-							list: [
-								'Git',
-								'GitHub'
-							]
-						},
-						{
-							type: 'sys admin',
-							list: [
-								'AWS',
-								'EC2',
-								'Route 53',
-							]
-						}
-					]
-				},
-				{
 					name: 'themerrier',
 					domain: '.com',
 					images: 8,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					mainStack: [
 						'MongoDB',
-						'Express',
-						'React',
+						'Express.js',
+						'React.js',
 						'Node.js',
 					],
 					technologies: [
@@ -234,7 +196,7 @@ export default {
 								'JS',
 								'npm',
 								'PostCSS',
-								'React',
+								'React.js',
 								'Sass',
 								'Webpack',
 							]
@@ -242,7 +204,7 @@ export default {
 						{
 							type: 'back end',
 							list: [
-								'Express',
+								'Express.js',
 								'MongoDB',
 								'Nginx',
 								'Node.js',
@@ -272,17 +234,17 @@ export default {
 					domain: '.global',
 					images: 8,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					mainStack: [
-						'GraphQL',
-						'Express',
-						'Vue',
+						'Firebase Cloud Firestore',
+						'Express.js',
+						'Vue.js',
 						'Node.js'
 					],
 					technologies: [
 						{
 							type: 'front end',
 							list: [
-								'Apollo',
 								'Axios',
 								'Babel',
 								'CSS3',
@@ -298,7 +260,7 @@ export default {
 								'Socket.io',
 								'Stylus',
 								'Vue Router',
-								'Vue',
+								'Vue.js',
 								'Vuex',
 								'Webpack',
 							]
@@ -307,18 +269,141 @@ export default {
 							type: 'back end',
 							list: [
 								'Babel',
-								'Express',
+								'Express.js',
 								'Firebase Admin Node SDK',
 								'Firebase Cloud Firestore',
-								'GraphQL',
+								'Quasar',
 								'MongoDB',
 								'Mongoose',
 								'Nginx',
 								'Node.js',
 								'npm',
-								'Nuxt',
 								'PM2',
 								'Socket.io',
+							]
+						},
+						{
+							type: 'version control',
+							list: [
+								'Git',
+								'GitHub'
+							]
+						},
+						{
+							type: 'sys admin',
+							list: [
+								'AWS',
+								'EC2',
+								'Route 53',
+							]
+						}
+					]
+				},
+				{
+					name: 'myleisure',
+					domain: '.com.au',
+					images: 6,
+					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
+					mainStack: [
+						'MongoDB',
+						'Express.js',
+						'Pug SSR',
+						'Node.js'
+					],
+					technologies: [
+						{
+							type: 'front end',
+							list: [
+								'Babel',
+								'CSS3',
+								'Font Awesome',
+								'Fort Awesome',
+								'Grunt',
+								'HTML5',
+								'jQuery',
+								'JS',
+								'npm',
+								'PostCSS',
+								'Pug SSR',
+								'Sass',
+								'Shopify JS SDK',
+							]
+						},
+						{
+							type: 'back end',
+							list: [
+								'Babel',
+								'Express.js',
+								'MongoDB',
+								'Mongoose',
+								'Nginx',
+								'Node.js',
+								'npm',
+								'PM2',
+								'Pug SSR',
+								'Shopify Node SDK',
+							]
+						},
+						{
+							type: 'version control',
+							list: [
+								'Git',
+								'GitHub'
+							]
+						},
+						{
+							type: 'sys admin',
+							list: [
+								'AWS',
+								'EC2',
+								'Route 53',
+							]
+						}
+					]
+				},
+				{
+					name: 'lopudesigns',
+					domain: '.com.au',
+					images: 5,
+					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
+					mainStack: [
+						'Express.js',
+						'Quasar',
+						'Vue.js',
+						'Node.js'
+					],
+					technologies: [
+						{
+							type: 'front end',
+							list: [
+								'Axios',
+								'Babel',
+								'Google Material Icons',
+								'HTML5',
+								'JS',
+								'CSS3',
+								'npm',
+								'PostCSS',
+								'Quasar',
+								'Sass',
+								'Socket.io',
+								'Stylus',
+								'Vue Router',
+								'Vue.js',
+								'Vuex',
+								'Webpack',
+							]
+						},
+						{
+							type: 'back end',
+							list: [
+								'Quasar',
+								'Express.js',
+								'Nginx',
+								'npm',
+								'PM2',
 							]
 						},
 						{
@@ -343,17 +428,17 @@ export default {
 					domain: '.com',
 					images: 2,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					mainStack: [
-						'GraphQL',
-						'Express',
-						'Vue',
+						'MongoDB',
+						'Express.js',
+						'Vue.js',
 						'Node.js'
 					],
 					technologies: [
 						{
 							type: 'front end',
 							list: [
-								'Apollo',
 								'Axios',
 								'Babel',
 								'CSS3',
@@ -369,7 +454,7 @@ export default {
 								'Socket.io',
 								'Stylus',
 								'Vue Router',
-								'Vue',
+								'Vue.js',
 								'Vuex',
 								'Webpack',
 							]
@@ -378,16 +463,15 @@ export default {
 							type: 'back end',
 							list: [
 								'Babel',
-								'Express',
+								'Express.js',
 								'Firebase Admin Node SDK',
 								'Firebase Cloud Firestore',
-								'GraphQL',
+								'Quasar',
 								'MongoDB',
 								'Mongoose',
 								'Nginx',
 								'Node.js',
 								'npm',
-								'Nuxt',
 								'PM2',
 								'Socket.io',
 							]
@@ -415,9 +499,10 @@ export default {
 					domain: '.com.au',
 					images: 10,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					mainStack: [
 						'MongoDB',
-						'Express',
+						'Express.js',
 						'Pug SSR',
 						'Node.js'
 					],
@@ -445,7 +530,7 @@ export default {
 							type: 'back end',
 							list: [
 								'Babel',
-								'Express',
+								'Express.js',
 								'MongoDB',
 								'Mongoose',
 								'Node.js',
@@ -478,6 +563,7 @@ export default {
 					domain: '.com.au',
 					images: 12,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					mainStack: [
 						'MySQL',
 						'Nginx',
@@ -526,6 +612,7 @@ export default {
 					domain: '.com.au',
 					images: 2,
 					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
 					mainStack: [
 						'MySQL',
 						'Nginx',
@@ -571,23 +658,26 @@ export default {
 		}
 	},
 	created(){
-		for(var i=0;i<this.websites.length;i++){
-			// console.log('http://api.linkpreview.net/?key=5acf3522e03ea918d58be2384bacb0c9bfc0481364d1a&q='+this.websites[i].name+this.websites[i].domain)
-			// this.$axios.get('http://api.linkpreview.net/?key=5acf3522e03ea918d58be2384bacb0c9bfc0481364d1a&q='+this.websites[i].name+this.websites[i].domain)
-			// .then(res=>{
-			//   console.log(res)
-			// })
-			// .catch(err=>{
-			//   console.error(err)
-			// })
-		}
+		this.websites.forEach(website=>{
+			this.$set(website, 'stackShown', true)
+			setTimeout(()=>{
+				this.$set(website, 'stackShown', false)
+			}, Math.random()*3000)
+		})
+
 	},
 	methods: {
 		moveSlider(slider, to){
 			console.log(this.$refs)
 			console.log({slider, to})
 			this.$refs[slider][0].goTo(to-1)
-		}
+		},
+		handleShow(website){
+			this.$set(website, 'stackShown', true)
+		},
+		handleHide(website){
+			this.$set(website, 'stackShown', false)
+		},
 	}
 }
 </script>
@@ -638,6 +728,7 @@ export default {
 	box-sizing: border-box
 	border: none
 .site-card
+	margin: 20px
 	// padding-bottom: 15px
 .slick-slider
 	max-width: 100%
@@ -681,6 +772,14 @@ a
 			text-transform: capitalize
 			padding-top: 15px
 			margin-bottom: -5px
+.technology
+	padding: 18px
+	img
+		// height: 15px
+		// min-height: 10px
+		max-height: 20px
+		// width: 140px
+		max-width: 60px
 .technologies
 	display: flex
 	// align-items: flex-start
@@ -690,14 +789,6 @@ a
 	padding-top: 10px
 	padding-bottom: 5px
 	align-items: center
-	.technology
-		padding: 18px
-		img
-			// height: 15px
-			// min-height: 10px
-			max-height: 20px
-			// width: 140px
-			max-width: 60px
 	&.center-wide
 		width: 100%
 		justify-content: center
@@ -718,8 +809,25 @@ a
 .q-card-footer
 	padding: 16px
 	padding-top: 35px
+	width: 100%
+	.wrapper
+		display: inline-block
+		&.github
+			float: right
+			margin-top: 5px
+	.devbytext
+		// display: inline-block
+	.github-link
+		// display: inline-block
+		padding: 0px
+		// text-align: bottom
+		img
+			margin-bottom: -3px
+			max-height: 15px
 .q-card-title
-	a
+	a,
+	.site-title
+		display: inline-block
 		font-size: 20px
 		color: $secondary
 .q-item-main
