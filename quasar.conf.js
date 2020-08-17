@@ -33,6 +33,12 @@ module.exports = function (ctx) {
       // useNotifier: false,
       extendWebpack (cfg) {
         // cfg.resolve.alias['@'] = path.join(__dirname, 'src')
+        cfg.module.rules.push(
+					{
+						test: /\.pug$/,
+						loader: 'pug-plain-loader'
+					}
+				)
         // cfg.module.rules.push(
         //   {
         //     test: /\.(cur|ani)$/,
