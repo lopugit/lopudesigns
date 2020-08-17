@@ -364,7 +364,7 @@ export default {
 				},
 				{
 					name: 'lopudesigns',
-					domain: '.com.au',
+					domain: '.com',
 					images: 5,
 					author: 'Nikolaj Frey',
 					authorContact: "https://www.linkedin.com/in/nikolajfrey",
