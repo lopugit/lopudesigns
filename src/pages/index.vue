@@ -161,7 +161,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -216,7 +216,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -286,7 +286,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -349,7 +349,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -410,7 +410,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -480,7 +480,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -544,7 +544,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -592,7 +592,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
@@ -640,7 +640,7 @@ export default {
 							type: 'version control',
 							list: [
 								'Git',
-								'GitHub'
+								'Github'
 							]
 						},
 						{
