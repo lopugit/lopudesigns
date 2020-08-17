@@ -58,11 +58,11 @@
 					).shadow-0.text-secondary.close-contact
 					.q-pa-lg.contact-modal-positioner.q-ma-md
 						h2(style="margin-bottom: 0px; margin-top: 0px") Contact
-						.contacts(style="display: flex;")
-							a(style="margin-top: -5px;" href="mailto:friends@lopudesigns.com")
-								h5.q-pb-md friends@lopudesigns.com
-							a(style="margin-top: -5px; padding-left: 10px" href="tel:+61422016261")
-								h5.q-pb-md +614 2201 6261
+						.contacts.q-pt-xs.q-pb-md
+							a.text-secondary.q-pr-sm(href="mailto:enquiries@lopudesigns.com")
+								| friends@lopudesigns.com
+							a.text-secondary(href="tel:+61422016261")
+								| +614 2201 6261
 						form(
 							v-on:submit.prevent=""
 							).q-form
@@ -390,8 +390,13 @@ export default {
 		max-height: 85vh !important
 	.contact-modal-positioner
 		background $tertiary
-		width: 600px
+		// width: 600px
 		max-width: 100%
+		.contacts
+			a
+				display: block
+			// display: flex
+			// flex-wrap: wrap
 		.q-form
 			display flex
 			flex-direction column

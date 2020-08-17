@@ -126,6 +126,7 @@ export default {
 						{
 							type: 'front end',
 							list: [
+								'Ant Design',
 								'Babel',
 								'CSS3',
 								'Font Awesome',
@@ -272,13 +273,14 @@ export default {
 								'Express.js',
 								'Firebase Admin Node SDK',
 								'Firebase Cloud Firestore',
-								'Quasar',
 								'MongoDB',
 								'Mongoose',
 								'Nginx',
 								'Node.js',
 								'npm',
 								'PM2',
+								'Quasar',
+								'Redis',
 								'Socket.io',
 							]
 						},
@@ -466,13 +468,14 @@ export default {
 								'Express.js',
 								'Firebase Admin Node SDK',
 								'Firebase Cloud Firestore',
-								'Quasar',
 								'MongoDB',
 								'Mongoose',
 								'Nginx',
 								'Node.js',
 								'npm',
 								'PM2',
+								'Quasar',
+								'Redis',
 								'Socket.io',
 							]
 						},
@@ -513,6 +516,7 @@ export default {
 								'Babel',
 								'CSS3',
 								'D3',
+								'Bootstrap',
 								'Font Awesome',
 								'Fort Awesome',
 								'Grunt',
@@ -537,6 +541,7 @@ export default {
 								'npm',
 								'PM2',
 								'Pug SSR',
+								'Redis',
 								'Shopify Node SDK',
 							]
 						},
@@ -567,7 +572,7 @@ export default {
 					mainStack: [
 						'MySQL',
 						'Nginx',
-						'HTML',
+						'Bootstrap',
 						'PHP',
 					],
 					technologies: [
@@ -575,6 +580,7 @@ export default {
 							type: 'front end',
 							list: [
 								'PHP',
+								'Bootstrap',
 								'PostCSS',
 								'HTML5',
 								'CSS3',
@@ -616,7 +622,7 @@ export default {
 					mainStack: [
 						'MySQL',
 						'Nginx',
-						'HTML',
+						'Wordpress',
 						'PHP',
 					],
 					technologies: [
@@ -624,6 +630,7 @@ export default {
 							type: 'front end',
 							list: [
 								'PHP',
+								'Wordpress',
 								'HTML5',
 								'CSS3',
 								'JS'
