@@ -17,7 +17,8 @@
 								speed: 2500,
 								autoplaySpeed: Math.random()*3000,
 								autoplay: true,
-								slidesToShow: 1
+								slidesToShow: 1,
+								pauseOnHover: false
 							}`
 							)
 							img(
