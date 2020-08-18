@@ -16,7 +16,7 @@
 							:options=`{
 								speed: 2500,
 								autoplaySpeed: Math.random()*3000,
-								autoplay: true,
+								autoplay: false,
 								slidesToShow: 1,
 								//- pauseOnHover: false
 							}`
@@ -366,67 +366,6 @@ export default {
 					]
 				},
 				{
-					name: 'lopudesigns',
-					domain: '.com',
-					images: 5,
-					author: 'Nikolaj Frey',
-					authorContact: "https://www.linkedin.com/in/nikolajfrey",
-					mainStack: [
-						'Express.js',
-						'Quasar',
-						'Vue.js',
-						'Node.js'
-					],
-					technologies: [
-						{
-							type: 'front end',
-							list: [
-								'Axios',
-								'Babel',
-								'Google Material Icons',
-								'HTML5',
-								'JS',
-								'CSS3',
-								'npm',
-								'PostCSS',
-								'Quasar',
-								'Sass',
-								'Socket.io',
-								'Stylus',
-								'Vue Router',
-								'Vue.js',
-								'Vuex',
-								'Webpack',
-							]
-						},
-						{
-							type: 'back end',
-							list: [
-								'Quasar',
-								'Express.js',
-								'Nginx',
-								'npm',
-								'PM2',
-							]
-						},
-						{
-							type: 'version control',
-							list: [
-								'Git',
-								'Github'
-							]
-						},
-						{
-							type: 'sys admin',
-							list: [
-								'AWS',
-								'EC2',
-								'Route 53',
-							]
-						}
-					]
-				},
-				{
 					name: 'alopu',
 					domain: '.com',
 					images: 2,
@@ -559,6 +498,67 @@ export default {
 								'AWS',
 								'EC2',
 								'Nginx',
+								'Route 53',
+							]
+						}
+					]
+				},
+				{
+					name: 'lopudesigns',
+					domain: '.com',
+					images: 5,
+					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
+					mainStack: [
+						'Express.js',
+						'Quasar',
+						'Vue.js',
+						'Node.js'
+					],
+					technologies: [
+						{
+							type: 'front end',
+							list: [
+								'Axios',
+								'Babel',
+								'Google Material Icons',
+								'HTML5',
+								'JS',
+								'CSS3',
+								'npm',
+								'PostCSS',
+								'Quasar',
+								'Sass',
+								'Socket.io',
+								'Stylus',
+								'Vue Router',
+								'Vue.js',
+								'Vuex',
+								'Webpack',
+							]
+						},
+						{
+							type: 'back end',
+							list: [
+								'Quasar',
+								'Express.js',
+								'Nginx',
+								'npm',
+								'PM2',
+							]
+						},
+						{
+							type: 'version control',
+							list: [
+								'Git',
+								'Github'
+							]
+						},
+						{
+							type: 'sys admin',
+							list: [
+								'AWS',
+								'EC2',
 								'Route 53',
 							]
 						}
