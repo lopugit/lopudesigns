@@ -15,11 +15,12 @@
 							:ref="'slick-'+website.name"
 							:options=`{
 								speed: 2500,
-								autoplaySpeed: Math.random()*5000,
+								autoplaySpeed: (Math.random()*1000)+2000,
 								autoplay: true,
 								slidesToShow: 1,
-								//- pauseOnHover: false
-							}`
+								prevArrow: "<button type='button' class='slick-prev pull-left'><i class='q-icon material-icons text-black' aria-hidden='true'>chevron_left</i></button>",
+								nextArrow: "<button type='button' class='slick-next pull-right'><i class='q-icon material-icons text-black' aria-hidden='true'>chevron_right</i></button>"							
+								}`
 							)
 							img(
 								v-for="(img, index) in website.images"
@@ -740,6 +741,8 @@ export default {
 	// padding-bottom: 15px
 .slick-slider
 	max-width: 100%
+	position: relative
+	display: block
 	.slick-slide
 		&>div
 			max-height: 250px
@@ -748,7 +751,21 @@ export default {
 		height auto !important
 		max-width 100%
 	.slick-arrow
-		display none !important
+		position: absolute
+		z-index: 1000
+		background: none
+		border: 0px
+		font-size: 26px
+		top: 85%
+		opacity: .1
+		outline: 0 !important
+		animate: all 300ms ease
+		&:hover
+			opacity: .8
+		&.slick-next
+			right: 0
+		&.slick-prev
+			left: 0
 a
 	color $primary
 	text-decoration none
