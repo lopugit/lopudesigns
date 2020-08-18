@@ -18,8 +18,8 @@
 								autoplaySpeed: (Math.random()*1000)+2000,
 								autoplay: true,
 								slidesToShow: 1,
-								prevArrow: "<button type='button' class='slick-prev pull-left'><i class='q-icon material-icons text-black' aria-hidden='true'>chevron_left</i></button>",
-								nextArrow: "<button type='button' class='slick-next pull-right'><i class='q-icon material-icons text-black' aria-hidden='true'>chevron_right</i></button>"							
+								prevArrow: `<button type='button' class='slick-prev pull-left'><i class='q-icon material-icons text-black' aria-hidden='true'>chevron_left</i></button>`,
+								nextArrow: `<button type='button' class='slick-next pull-right'><i class='q-icon material-icons text-black' aria-hidden='true'>chevron_right</i></button>`							
 								}`
 							)
 							img(
