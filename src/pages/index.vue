@@ -114,128 +114,6 @@ export default {
 			},
 			websites: [
 				{
-					name: 'weyoume',
-					domain: '.io',
-					github: 'weapp',
-					images: 5,
-					author: 'Nikolaj Frey',
-					authorContact: "https://www.linkedin.com/in/nikolajfrey",
-					originLink: true,
-					mainStack: [
-						'Steem',
-						'Steem Connect',
-						'React.js',
-						'Node.js'
-					],
-					technologies: [
-						{
-							type: 'front end',
-							list: [
-								'Ant Design',
-								'Babel',
-								'CSS3',
-								'Font Awesome',
-								'HTML5',
-								'JS',
-								'Less',
-								'npm',
-								'PostCSS',
-								'Pug SSR',
-								'React Router',
-								'React.js',
-								'Redux',
-								'Sass',
-								'Steem Connect',
-								'Webpack',
-							]
-						},
-						{
-							type: 'back end',
-							list: [
-								'Babel',
-								'Express.js',
-								'Nginx',
-								'Node.js',
-								'npm',
-								'PM2',
-								'Steem Connect',
-								'Steem',
-								'Webpack',
-							]
-						},
-						{
-							type: 'version control',
-							list: [
-								'Git',
-								'Github'
-							]
-						},
-						{
-							type: 'sys admin',
-							list: [
-								'AWS',
-								'EC2',
-								'Route 53',
-							]
-						}
-					]
-				},
-				{
-					name: 'themerrier',
-					domain: '.com',
-					images: 8,
-					author: 'Nikolaj Frey',
-					authorContact: "https://www.linkedin.com/in/nikolajfrey",
-					mainStack: [
-						'MongoDB',
-						'Express.js',
-						'React.js',
-						'Node.js',
-					],
-					technologies: [
-						{
-							type: 'front end',
-							list: [
-								'Babel',
-								'CSS3',
-								'HTML5',
-								'JS',
-								'npm',
-								'PostCSS',
-								'React.js',
-								'Sass',
-								'Webpack',
-							]
-						},
-						{
-							type: 'back end',
-							list: [
-								'Express.js',
-								'MongoDB',
-								'Nginx',
-								'Node.js',
-								'npm',
-								'PM2',
-							]
-						},
-						{
-							type: 'version control',
-							list: [
-								'Git',
-								'Github'
-							]
-						},
-						{
-							type: 'sys admin',
-							list: [
-								'AWS',
-								'EC2',
-								'Route 53',
-							]
-						}
-					]
-				},
-				{
 					name: 'planetexpress',
 					domain: '.global',
 					images: 8,
@@ -369,6 +247,194 @@ export default {
 						}
 					]
 				},
+{
+					name: 'ozledgrowlights',
+					domain: '.com.au',
+					images: 10,
+					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
+					mainStack: [
+						'MongoDB',
+						'Express.js',
+						'Pug SSR',
+						'Node.js'
+					],
+					technologies: [
+						{
+							type: 'front end',
+							list: [
+								'Babel',
+								'CSS3',
+								'D3',
+								'Bootstrap',
+								'Font Awesome',
+								'Fort Awesome',
+								'Grunt',
+								'HTML5',
+								'jQuery',
+								'JS',
+								'npm',
+								'PostCSS',
+								'Pug SSR',
+								'Sass',
+								'Shopify JS SDK',
+							]
+						},
+						{
+							type: 'back end',
+							list: [
+								'Babel',
+								'Express.js',
+								'MongoDB',
+								'Mongoose',
+								'Node.js',
+								'npm',
+								'PM2',
+								'Pug SSR',
+								'Redis',
+								'Shopify Node SDK',
+							]
+						},
+						{
+							type: 'version control',
+							list: [
+								'Git',
+								'Github'
+							]
+						},
+						{
+							type: 'sys admin',
+							list: [
+								'AWS',
+								'EC2',
+								'Nginx',
+								'Route 53',
+							]
+						}
+					]
+				},
+				{
+					name: 'weyoume',
+					domain: '.io',
+					github: 'weapp',
+					images: 5,
+					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
+					originLink: true,
+					mainStack: [
+						'Steem',
+						'Steem Connect',
+						'React.js',
+						'Node.js'
+					],
+					technologies: [
+						{
+							type: 'front end',
+							list: [
+								'Ant Design',
+								'Babel',
+								'CSS3',
+								'Font Awesome',
+								'HTML5',
+								'JS',
+								'Less',
+								'npm',
+								'PostCSS',
+								'Pug SSR',
+								'React Router',
+								'React.js',
+								'Redux',
+								'Sass',
+								'Steem Connect',
+								'Webpack',
+							]
+						},
+						{
+							type: 'back end',
+							list: [
+								'Babel',
+								'Express.js',
+								'Nginx',
+								'Node.js',
+								'npm',
+								'PM2',
+								'Steem Connect',
+								'Steem',
+								'Webpack',
+							]
+						},
+						{
+							type: 'version control',
+							list: [
+								'Git',
+								'Github'
+							]
+						},
+						{
+							type: 'sys admin',
+							list: [
+								'AWS',
+								'EC2',
+								'Route 53',
+							]
+						}
+					]
+				},
+				{
+					name: 'themerrier',
+					domain: '.com',
+					images: 8,
+					author: 'Nikolaj Frey',
+					authorContact: "https://www.linkedin.com/in/nikolajfrey",
+					mainStack: [
+						'MongoDB',
+						'Express.js',
+						'React.js',
+						'Node.js',
+					],
+					technologies: [
+						{
+							type: 'front end',
+							list: [
+								'Babel',
+								'CSS3',
+								'HTML5',
+								'JS',
+								'npm',
+								'PostCSS',
+								'React.js',
+								'Sass',
+								'Webpack',
+							]
+						},
+						{
+							type: 'back end',
+							list: [
+								'Express.js',
+								'MongoDB',
+								'Nginx',
+								'Node.js',
+								'npm',
+								'PM2',
+							]
+						},
+						{
+							type: 'version control',
+							list: [
+								'Git',
+								'Github'
+							]
+						},
+						{
+							type: 'sys admin',
+							list: [
+								'AWS',
+								'EC2',
+								'Route 53',
+							]
+						}
+					]
+				},
 				{
 					name: 'alopu',
 					domain: '.com',
@@ -440,72 +506,6 @@ export default {
 						}
 					]
 
-				},
-				{
-					name: 'ozledgrowlights',
-					domain: '.com.au',
-					images: 10,
-					author: 'Nikolaj Frey',
-					authorContact: "https://www.linkedin.com/in/nikolajfrey",
-					mainStack: [
-						'MongoDB',
-						'Express.js',
-						'Pug SSR',
-						'Node.js'
-					],
-					technologies: [
-						{
-							type: 'front end',
-							list: [
-								'Babel',
-								'CSS3',
-								'D3',
-								'Bootstrap',
-								'Font Awesome',
-								'Fort Awesome',
-								'Grunt',
-								'HTML5',
-								'jQuery',
-								'JS',
-								'npm',
-								'PostCSS',
-								'Pug SSR',
-								'Sass',
-								'Shopify JS SDK',
-							]
-						},
-						{
-							type: 'back end',
-							list: [
-								'Babel',
-								'Express.js',
-								'MongoDB',
-								'Mongoose',
-								'Node.js',
-								'npm',
-								'PM2',
-								'Pug SSR',
-								'Redis',
-								'Shopify Node SDK',
-							]
-						},
-						{
-							type: 'version control',
-							list: [
-								'Git',
-								'Github'
-							]
-						},
-						{
-							type: 'sys admin',
-							list: [
-								'AWS',
-								'EC2',
-								'Nginx',
-								'Route 53',
-							]
-						}
-					]
 				},
 				{
 					name: 'lopudesigns',
