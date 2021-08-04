@@ -3,7 +3,7 @@ const
   express = require('express'),
   serveStatic = require('serve-static'),
   history = require('connect-history-api-fallback'),
-  port = 7778
+  port = 7777+1
 
 
 const app = express()

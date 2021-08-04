@@ -1,7 +1,7 @@
 module.exports = {
   apps : [
 	{
-		name: 'prod-serve-lopudesigns',
+		name: 'prod--lopudesigns',
     		script: 'node serve.js'
   	}
   ]
