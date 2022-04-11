@@ -22,7 +22,7 @@
     "serve": "quasar serve dist/spa-mat/ --history -p 7778"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.2",
     "babel-runtime": "^6.26.0",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.50.0",
